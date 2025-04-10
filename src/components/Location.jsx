@@ -26,10 +26,6 @@ const locations = [
     description: "Reliable manpower services in Indore, Bhopal and more.",
   },
   {
-    name: "Kolkata",
-    description: "Expert teams working in logistics, retail, and tech sectors.",
-  },
-  {
     name: "Pune",
     description:
       "Major support for IT, logistics, and startups in Pune region.",
@@ -46,7 +42,7 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 30 },
   show: {
     opacity: 1,
     y: 0,
@@ -59,7 +55,7 @@ const cardVariants = {
 
 const Location = () => {
   return (
-    <section className="bg-gradient-to-r from-blue-50 via-white to-blue-50 py-20 px-4 min-h-screen">
+    <section className="bg-gradient-to-r from-blue-50 via-white to-blue-50 py-20 px-4">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -72,8 +68,8 @@ const Location = () => {
           <span className="text-blue-600">Manpower Services</span>
         </h2>
         <p className="text-gray-600 text-lg">
-          With a pan-India presence, we deliver reliable and customized manpower
-          solutions to meet your business needs.
+          We serve key regions across India with customized hiring and workforce
+          solutions.
         </p>
       </motion.div>
 
@@ -88,15 +84,17 @@ const Location = () => {
           <motion.div
             key={index}
             variants={cardVariants}
-            className="bg-white rounded-2xl shadow-md p-6 group hover:shadow-xl hover:scale-[1.03] transition-all duration-300"
+            className="bg-white rounded-2xl shadow-md p-6 border border-blue-100 hover:shadow-xl hover:-translate-y-1 hover:border-blue-300 transition-all duration-300"
           >
-            <div className="flex items-center gap-4 mb-3">
-              <MapPin className="w-8 h-8 text-blue-600 group-hover:text-blue-800 transition" />
+            <div className="flex items-center gap-3 mb-3">
+              <MapPin className="w-7 h-7 text-blue-600" />
               <h3 className="text-xl font-semibold text-gray-800">
                 {loc.name}
               </h3>
             </div>
-            <p className="text-gray-600 text-sm">{loc.description}</p>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {loc.description}
+            </p>
           </motion.div>
         ))}
       </motion.div>

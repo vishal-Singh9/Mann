@@ -12,6 +12,8 @@ import Talent from "./components/Talent";
 import Charges from "./components/Charges";
 import Location from "./components/Location";
 import Home from "./components/Home";
+import Blog from "./components/Blog";
+import Resources from "./components/Resources";
 
 function App() {
   return (
@@ -19,15 +21,17 @@ function App() {
       <div className="min-h-screen bg-white">
         <Navbar />
 
-        <Home />
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/location" element={<Location />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/talent" element={<Talent />} />
-          <Route path="/charges" element={<Charges />} />
+          {/* <Route path="/charges" element={<Charges />} /> */}
+          <Route path="/blog" element={<Blog />} />
           <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
 

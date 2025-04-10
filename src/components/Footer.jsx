@@ -45,7 +45,7 @@ function Footer() {
               {["home", "services", "about", "contact"].map((link, i) => (
                 <a
                   key={i}
-                  href={`#${link}`}
+                  href={`${link}`}
                   className="block text-gray-400 hover:text-blue-400 transition duration-200"
                 >
                   {link.charAt(0).toUpperCase() + link.slice(1)}
@@ -60,10 +60,10 @@ function Footer() {
               Contact Info
             </h3>
             <div className="space-y-2 text-gray-400 text-sm leading-relaxed">
-              <p>123 Business Avenue</p>
-              <p>New York, NY 10001</p>
-              <p>contact@hrpro.com</p>
-              <p>(555) 123-4567</p>
+              <p>922 Satyamev Shivalik ,Sardar Patel Ring Rd</p>
+              <p>Junction Ambli - Bopal Rd Ahmedabad, Gujarat 380058</p>
+              <p>Email: Mukulmahor2024@gmail.com</p>
+              <p>Mobile: +918839164276</p>
             </div>
           </motion.div>
         </motion.div>

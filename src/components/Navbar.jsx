@@ -7,6 +7,8 @@ const navLinks = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Blog", href: "/blog" },
+  { label: "Resources", href: "/resources" },
 ];
 
 function Navbar() {

@@ -1,6 +1,5 @@
 import React from "react";
 import About from "./About";
-import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Services from "./Services";
 import Location from "./Location";
@@ -9,7 +8,8 @@ import Talent from "./Talent";
 import Charges from "./Charges";
 import Testimonials from "./Testimonials";
 import { Contact } from "lucide-react";
-import Footer from "./Footer";
+import Blog from "./Blog";
+import Resources from "./Resources";
 
 const Home = () => {
   return (
@@ -20,8 +20,10 @@ const Home = () => {
       <Location />
       <Stats />
       <Talent />
-      <Charges />
+      {/* <Charges /> */}
+      <Blog />
       <Testimonials />
+      <Resources />
       <Contact />
     </div>
   );
