@@ -1,6 +1,7 @@
 import React from "react";
-import { Users, Briefcase, ShieldCheck, ArrowRight } from "lucide-react";
+import { Users, Briefcase, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -9,18 +10,14 @@ const Services = () => {
       title: "Blue Collar Jobs",
       description:
         "Hands-on roles in sectors like agriculture, construction, manufacturing, and maintenance. These jobs are crucial to the backbone of our economy.",
+      link: "/services/blue-collar",
     },
     {
       icon: Briefcase,
       title: "White Collar Jobs",
       description:
         "Professional or office-based roles requiring management, administrative, or tech skills. These positions offer long-term career opportunities.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "Security Services",
-      description:
-        "Trained personnel for industrial, residential, and commercial security needs. We ensure trust, discipline, and safety.",
+      link: "/services/white-collar",
     },
   ];
 
@@ -47,15 +44,16 @@ const Services = () => {
 
   return (
     <section
+      className="py-24 bg-gradient-to-b from-gray-50 to-white"
       id="services"
-      className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100"
     >
-      <div className="container mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-5xl font-bold text-center mb-14 text-gray-800"
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16"
         >
           Our Services
         </motion.h2>
@@ -65,14 +63,14 @@ const Services = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"
+          className="grid gap-10 sm:grid-cols-1 md:grid-cols-2"
         >
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
-              whileHover={{ scale: 1.03 }}
-              className="bg-white p-8 rounded-3xl shadow-xl border border-blue-100 hover:border-blue-300 transition-all duration-300"
+              whileHover={{ scale: 1.02 }}
+              className="bg-white border border-gray-100 hover:border-blue-200 p-8 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center mb-6">
                 <div className="p-4 rounded-full bg-blue-100 text-blue-600 shadow-md">
@@ -82,16 +80,17 @@ const Services = () => {
                   {service.title}
                 </h3>
               </div>
-              <p className="text-gray-600 leading-relaxed text-[15px]">
+              <p className="text-gray-600 text-[15px] leading-relaxed mb-6">
                 {service.description}
               </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="mt-6 inline-flex items-center text-blue-600 hover:text-blue-800 transition-all duration-300"
-              >
-                Learn More <ArrowRight className="ml-2 h-4 w-4" />
-              </motion.button>
+              <div>
+                <Link
+                  to={service.link}
+                  className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 transition"
+                >
+                  Know More <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </motion.div>
           ))}
         </motion.div>

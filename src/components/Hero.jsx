@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="pt-24 bg-gradient-to-r from-blue-600 to-blue-800 text-white relative overflow-hidden"
+      className="pt-24 py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white relative overflow-hidden"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ function Hero() {
             services. We help businesses build, manage, and optimize their human
             resources.
           </motion.p>
-          <motion.a
+          {/* <motion.a
             href="/contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -41,7 +41,7 @@ function Hero() {
           >
             Get Started
             <ArrowRight className="ml-2 h-5 w-5" />
-          </motion.a>
+          </motion.a> */}
         </div>
       </motion.div>
       <div className="absolute bottom-0 right-0 w-1/2 h-full hidden lg:block">

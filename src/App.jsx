@@ -14,6 +14,9 @@ import Location from "./components/Location";
 import Home from "./components/Home";
 import Blog from "./components/Blog";
 import Resources from "./components/Resources";
+import BlueCollarJobs from "./components/BlueCollorJobs";
+import WhiteCollarJobs from "./components/WhiteCollorJobs";
+import Provides from "./components/Provides";
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/blue-collar" element={<BlueCollarJobs />} />
+          <Route path="/services/white-collar" element={<WhiteCollarJobs />} />
+          <Route path="/provides" element={<Provides />} />
           <Route path="/location" element={<Location />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/talent" element={<Talent />} />

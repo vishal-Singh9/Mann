@@ -10,6 +10,7 @@ import Testimonials from "./Testimonials";
 import { Contact } from "lucide-react";
 import Blog from "./Blog";
 import Resources from "./Resources";
+import Provides from "./Provides";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Hero />
       <About />
       <Services />
+      <Provides />
       <Location />
       <Stats />
       <Talent />

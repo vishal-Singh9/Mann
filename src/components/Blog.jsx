@@ -61,8 +61,46 @@ const blogPosts = [
 
 function Blog() {
   return (
-    <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-gray-50 py-16 ">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative w-full"
+      >
+        <div
+          className="relative w-full h-[60vh] md:h-[60vh] bg-cover bg-center flex items-center"
+          style={{
+            backgroundImage: "url('/collor.webp')",
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-50" />
+
+          <div className="relative z-10 max-w-4xl px-6 md:px-16 lg:px-24">
+            <motion.h1
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4"
+            >
+              <span className="text-blue-400"> Blog & Insights</span>
+            </motion.h1>
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-lg sm:text-xl text-blue-100 max-w-xl"
+            >
+              Insights & Expertise to Help You Grow
+              <p>
+                Stay ahead with our latest blogs, trends, and professional
+                insights.
+              </p>
+            </motion.p>
+          </div>
+        </div>
+      </motion.div>
+      <div className="max-w-7xl mx-auto py-10">
         <h1 className="text-4xl font-extrabold text-center text-blue-700 mb-12">
           Blog & Insights
         </h1>
@@ -95,9 +133,6 @@ function Blog() {
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   {post.summary}
                 </p>
-                <button className="inline-block text-sm text-blue-600 font-semibold hover:underline transition">
-                  Read More →
-                </button>
               </div>
             </motion.div>
           ))}
