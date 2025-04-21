@@ -5,19 +5,21 @@ import Services from "./Services";
 import Location from "./Location";
 import Stats from "./Stats";
 import Talent from "./Talent";
-import Charges from "./Charges";
 import Testimonials from "./Testimonials";
-import { Contact } from "lucide-react";
 import Blog from "./Blog";
-import Resources from "./Resources";
 import Provides from "./Provides";
+import OwlCarouselComponent from "./Carousel";
+import QuotesThought from "./QuotesThought";
+import ResourcesPage from "./Resources";
 
 const Home = () => {
   return (
     <div>
       <Hero />
+      <OwlCarouselComponent />
       <About />
       <Services />
+      <QuotesThought />
       <Provides />
       <Location />
       <Stats />
@@ -25,8 +27,8 @@ const Home = () => {
       {/* <Charges /> */}
       <Blog />
       <Testimonials />
-      <Resources />
-      <Contact />
+
+      <ResourcesPage />
     </div>
   );
 };

@@ -17,6 +17,7 @@ import Resources from "./components/Resources";
 import BlueCollarJobs from "./components/BlueCollorJobs";
 import WhiteCollarJobs from "./components/WhiteCollorJobs";
 import Provides from "./components/Provides";
+import QuotesPage from "./components/Quotes";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/location" element={<Location />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/talent" element={<Talent />} />
+          <Route path="/quotes" element={<QuotesPage />} />
           {/* <Route path="/charges" element={<Charges />} /> */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/testimonials" element={<Testimonials />} />

@@ -100,6 +100,7 @@ function Footer() {
                   +91 8839164276
                 </a>
               </p>
+              <p>Hours: Mon-Sat: 10:00 AM - 7:00 PM</p>
             </div>
           </motion.div>
         </motion.div>

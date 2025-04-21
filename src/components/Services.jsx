@@ -95,6 +95,24 @@ const Services = () => {
           ))}
         </motion.div>
       </div>
+
+      {/* 👇 Centered Contact Info */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+        viewport={{ once: true }}
+        className="mt-20 text-center px-4"
+      >
+        <p className="text-lg text-gray-700 mb-2">
+          You can also send us an email and we’ll get in touch shortly,
+        </p>
+        <p className="text-blue-600 text-xl font-medium">
+          {" "}
+          Mukulmahor2024@gmail.com
+        </p>
+        <p className="text-blue-600 text-xl font-medium"> +91 8839164276</p>
+      </motion.div>
     </section>
   );
 };

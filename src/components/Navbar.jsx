@@ -16,6 +16,7 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
   { label: "Blog", href: "/blog" },
   { label: "Resources", href: "/resources" },
+  { label: "Quotes", href: "/quotes" },
 ];
 
 function Navbar() {
@@ -43,7 +44,7 @@ function Navbar() {
                 {link.children ? (
                   <>
                     <button
-                      className="flex items-center text-gray-700 font-medium hover:text-blue-600 transition duration-200"
+                      className="flex items-center text-gray-700 font-medium hover:text-blue-700 transition duration-200"
                       onClick={() =>
                         setActiveDropdown(activeDropdown === i ? null : i)
                       }
@@ -58,7 +59,7 @@ function Navbar() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: -10, scale: 0.95 }}
                           transition={{ duration: 0.2, ease: "easeOut" }}
-                          className="absolute left-0 mt-3 min-w-[140px] bg-white border border-gray-200 shadow-lg rounded-xl z-50 overflow-hidden"
+                          className="absolute left-0 mt-3 min-w-[120px] bg-white border border-gray-200 shadow-lg rounded-xl z-50 overflow-hidden"
                         >
                           {link.children.map((sublink, j) => (
                             <a
